@@ -1,0 +1,384 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Energy</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <header>
+  <nav class="navbar">
+      <div class="navbar-left">
+        <img src="images/logo.png" alt="Solar Energy Logo" class="logo-img" />
+        <span class="site-title">SOLAR ENERGY</span>
+      </div>
+      <div class="navbar-divider"></div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+
+
+
+
+
+  <section id="hero" class="hero">
+    <div class="hero-slideshow">
+      <div class="slide active" style="background-image: url('images/solar-bg1.jpg');"></div>
+      <div class="slide" style="background-image: url('images/solar-bg2.jpg');"></div>
+      <div class="slide" style="background-image: url('images/solar-bg3.jpg');"></div>
+      <div class="slide" style="background-image: url('images/solar-bg4.jpg');"></div>
+      <div class="slide" style="background-image: url('images/solar-bg5.jpg');"></div>
+      <div class="slide" style="background-image: url('images/solar-bg6.jpg');"></div>
+
+      <div class="hero-content">
+        <h1>Power Your Future with Solar Energy</h1>
+        <p>Clean, renewable, and sustainable energy solutions for a brighter tomorrow.</p>
+        <a href="#services" class="btn">Explore Services</a>
+        <a href="#products" class="btn" style="margin-left: 15px;">Explore Products</a>
+      </div>
+
+      <div class="slider-arrow left" onclick="prevSlide()">&#10094;</div>
+<div class="slider-arrow right" onclick="nextSlideManual()">&#10095;</div>
+
+    </div>
+  </section>
+
+
+<!-- ✅ Products Section -->
+<section class="products-container" id="products">
+  <h2>Our Solar Products</h2>
+  <div class="product-grid">
+
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="images/solar-365wp.jpg" alt="365 Wp Solar Panel" class="product-img">
+      <h3 class="product-title">365 Wp Mono PERC Panel</h3>
+      <p class="product-desc">High-efficiency solar module designed for residential and commercial rooftops.</p>
+      
+      <!-- Hover Info -->
+      <div class="product-hover-info">
+        <p>⚡ Warranty: 10 Years</p>
+        <p>⚡ Efficiency: 20.1%</p>
+        <p>⚡ Weight: 18 kg</p>
+      </div>
+
+      <a href="#contact" class="btn">Get Quote</a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="images/solar-395wp.jpg" alt="395 Wp Solar Panel" class="product-img">
+      <h3 class="product-title">395 Wp All-Black Panel</h3>
+      <p class="product-desc">Elegant all-black design with excellent low-light performance and durability.</p>
+      
+      <!-- Hover Info -->
+      <div class="product-hover-info">
+        <p>⚡ Warranty: 12 Years</p>
+        <p>⚡ Efficiency: 20.5%</p>
+        <p>⚡ Weight: 19 kg</p>
+      </div>
+
+      <a href="#contact" class="btn">Get Quote</a>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="images/solar-535wp.jpg" alt="535 Wp Solar Panel" class="product-img">
+      <h3 class="product-title">535 Wp Bifacial Panel</h3>
+      <p class="product-desc">Generates energy from both sides, ideal for large-scale and industrial systems.</p>
+      
+      <!-- Hover Info -->
+      <div class="product-hover-info">
+        <p>⚡ Warranty: 15 Years</p>
+        <p>⚡ Efficiency: 21%</p>
+        <p>⚡ Weight: 28 kg</p>
+      </div>
+
+      <a href="#contact" class="btn">Get Quote</a>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="images/solar-450wp.jpg" alt="450 Wp Solar Panel" class="product-img">
+      <h3 class="product-title">450 Wp Polycrystalline Panel</h3>
+      <p class="product-desc">Durable and efficient solar panel for both residential and commercial installations.</p>
+      
+      <!-- Hover Info -->
+      <div class="product-hover-info">
+        <p>⚡ Warranty: 10 Years</p>
+        <p>⚡ Efficiency: 18.5%</p>
+        <p>⚡ Weight: 20 kg</p>
+      </div>
+
+      <a href="#contact" class="btn">Get Quote</a>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-card">
+      <img src="images/solar-600wp.jpg" alt="600 Wp Solar Panel" class="product-img">
+      <h3 class="product-title">600 Wp High-Efficiency Panel</h3>
+      <p class="product-desc">Ideal for industrial setups, maximizing energy generation even in low-light conditions.</p>
+      
+      <!-- Hover Info -->
+      <div class="product-hover-info">
+        <p>⚡ Warranty: 15 Years</p>
+        <p>⚡ Efficiency: 21.5%</p>
+        <p>⚡ Weight: 32 kg</p>
+      </div>
+
+      <a href="#contact" class="btn">Get Quote</a>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="images/solar-320wp.jpg" alt="320 Wp Solar Panel" class="product-img">
+      <h3 class="product-title">320 Wp Compact Panel</h3>
+      <p class="product-desc">Lightweight and compact solar panel, perfect for small rooftops and portable setups.</p>
+      
+      <!-- Hover Info -->
+      <div class="product-hover-info">
+        <p>⚡ Warranty: 8 Years</p>
+        <p>⚡ Efficiency: 17.8%</p>
+        <p>⚡ Weight: 15 kg</p>
+      </div>
+
+      <a href="#contact" class="btn">Get Quote</a>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-card">
+      <img src="images/solar-480wp.jpg" alt="480 Wp Solar Panel" class="product-img">
+      <h3 class="product-title">480 Wp All-Black Panel</h3>
+      <p class="product-desc">All-black aesthetic with high-efficiency cells, suitable for modern homes.</p>
+      
+      <!-- Hover Info -->
+      <div class="product-hover-info">
+        <p>⚡ Warranty: 12 Years</p>
+        <p>⚡ Efficiency: 20.3%</p>
+        <p>⚡ Weight: 23 kg</p>
+      </div>
+
+      <a href="#contact" class="btn">Get Quote</a>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product-card">
+      <img src="images/solar-550wp.jpg" alt="550 Wp Solar Panel" class="product-img">
+      <h3 class="product-title">550 Wp Bifacial Panel</h3>
+      <p class="product-desc">Generates power from both sides of the panel, maximizing energy output for large-scale projects.</p>
+      
+      <!-- Hover Info -->
+      <div class="product-hover-info">
+        <p>⚡ Warranty: 15 Years</p>
+        <p>⚡ Efficiency: 21%</p>
+        <p>⚡ Weight: 29 kg</p>
+      </div>
+
+      <a href="#contact" class="btn">Get Quote</a>
+    </div>
+
+  </div>
+</section>
+<!-- ✅ End Products Section -->
+
+
+  <section id="about" class="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing clean and renewable energy solutions. Our mission is to make solar power accessible and affordable for homes and businesses, helping reduce carbon footprints and build a sustainable future.</p>
+        <p>With years of experience in solar panel installation and maintenance, we deliver reliable and efficient services tailored to your needs.</p>
+        <a href="#contact" class="btn">Contact Us</a>
+      </div>
+      <div class="about-image">
+        <img src="images/about.jpg" alt="About Solar Energy">
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="services-container">
+      <h2>Our Services</h2>
+      <p class="section-subtitle">Reliable renewable energy solutions tailored for you</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="images/solar-panel.png" alt="Solar Panel Installation">
+          <h3>Solar Panel Installation</h3>
+          <p>Professional setup of high-efficiency solar panels for homes and businesses.</p>
+        </div>
+        <div class="service-card">
+          <img src="images/maintenance.png" alt="Maintenance">
+          <h3>Maintenance & Support</h3>
+          <p>Regular inspections and servicing to ensure long-lasting performance.</p>
+        </div>
+        <div class="service-card">
+          <img src="images/consulting.png" alt="Energy Consulting">
+          <h3>Energy Consulting</h3>
+          <p>Expert advice on energy saving and renewable energy adoption strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stats" class="stats">
+    <div class="stats-container">
+      <div class="stat-card">
+        <h3 class="counter" data-target="300">0</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="counter" data-target="200">0</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="counter" data-target="5">0</h3>
+        <p>Years of Experience</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="counter" data-target="25">0</h3>
+        <p>Expert Team Members</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <div class="testimonials-container">
+      <div class="testimonial-card">
+        <img src="images/profile.png" alt="Client 1">
+        <p class="testimonial-text">“Excellent solar panel installation—our home energy bills have dropped significantly. The team was efficient and guided us through every step!”</p>
+        <h4>- Ramesh Patil</h4>
+      </div>
+      <div class="testimonial-card">
+        <img src="images/profile.png" alt="Client 2">
+        <p class="testimonial-text">“Amazing customer support and quick maintenance. The solar system works perfectly, even during cloudy days!”</p>
+        <h4>- Sneha Deshmukh</h4>
+      </div>
+      <div class="testimonial-card">
+        <img src="images/profile.png" alt="Client 3">
+        <p class="testimonial-text">“Professional consultation and top-quality panels. Highly recommended for anyone interested in going green and saving money.”</p>
+        <h4>- Ankit Sharma</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="founders" class="founders">
+    <div class="section-header">
+      <h2>Our Founders</h2>
+      <p>Meet the visionary leaders behind Solar Energy</p>
+    </div>
+
+    <div class="founders-container">
+  <!-- Founder 1 -->
+  <div class="founder-card" onclick="openModal('founder1')">
+    <img src="images/founder1.jpg" alt="Arjun Mehta">
+    <h3>Arjun Mehta</h3>
+    <p>Co-Founder & CEO</p>
+  </div>
+
+  <!-- Founder 2 -->
+  <div class="founder-card" onclick="openModal('founder2')">
+    <img src="images/founder2.jpg" alt="Vikram Singh">
+    <h3>Vikram Singh</h3>
+    <p>Co-Founder & CTO</p>
+  </div>
+
+  <!-- Founder 3 -->
+  <div class="founder-card" onclick="openModal('founder3')">
+    <img src="images/founder3.jpg" alt="Priya Kapoor">
+    <h3>Priya Kapoor</h3>
+    <p>Co-Founder & COO</p>
+  </div>
+</div>
+
+
+
+  <!-- Modals -->
+  <div id="founder1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('founder1')">&times;</span>
+      <h2>Arjun Mehta</h2>
+      <p>Co-Founder & CEO</p>
+      <p>Arjun has over 15 years of experience in renewable energy, specializing in solar panel installation and sustainable solutions for businesses and homes.</p>
+    </div>
+  </div>
+
+  <div id="founder2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('founder2')">&times;</span>
+      <h2>Vikram Singh</h2>
+      <p>Co-Founder & CTO</p>
+      <p>Vikram is a solar technology innovator with deep expertise in system design, maintenance, and energy efficiency strategies.</p>
+    </div>
+  </div>
+  <div id="founder3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('founder3')">&times;</span>
+    <h2>Priya Kapoor</h2>
+    <p>Co-Founder & COO</p>
+    <p>Priya brings over 10 years of experience in operations and project management in renewable energy, ensuring smooth execution and delivery of solar solutions.</p>
+  </div>
+</div>
+
+</section>
+
+  <section id="contact" class="contact">
+    <div class="section-header">
+      <h2>Contact Us</h2>
+      <p>Get in touch with Solar Energy for more information</p>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Our Office</h3>
+        <p>123 Solar Street, Green City, India</p>
+        <p>Phone: +91 9876543210</p>
+        <p>Email: info@solarenergy.com</p>
+      </div>
+      <div class="contact-form">
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Solar Energy</h3>
+        <p>Providing clean, reliable, and sustainable solar solutions for homes and businesses.</p>
+      </div>
+      <div class="footer-center">
+        <h4>Contact</h4>
+        <p>123 Solar Street, Green City, India</p>
+        <p>Phone: +91 9876543210</p>
+        <p>Email: info@solarenergy.com</p>
+      </div>
+      <div class="footer-right">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" target="_blank">Facebook</a>
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Solar Energy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  </body>
+  </html>
