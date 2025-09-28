@@ -847,7 +847,6 @@ html {
   from {opacity: 0; transform: scale(0.9);}
   to {opacity: 1; transform: scale(1);}
 }
-
 /* -------------------
    Products Section
 ------------------- */
@@ -888,8 +887,8 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  position: relative; /* ✅ required for overlay */
-  overflow: hidden;   /* ✅ prevents overlay from overflowing */
+  position: relative; /* required for overlay */
+  overflow: hidden;   /* prevents overlay from overflowing */
 }
 
 .product-card:hover {
@@ -937,6 +936,8 @@ html {
   border: none;
   cursor: pointer;
   transition: background 0.2s;
+  z-index: 3; /* ensures button is clickable */
+  position: relative;
 }
 
 .product-card .btn:hover {
@@ -952,7 +953,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(26, 71, 49, 0.95); /* dark green overlay */
+  background: rgba(26, 71, 49, 0.95);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -961,17 +962,34 @@ html {
   padding: 20px;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
   border-radius: 12px;
+  pointer-events: none; /* prevent blocking */
 }
 
 .product-card:hover .product-hover-info {
   opacity: 1;
+  pointer-events: auto; /* enable interactions only when visible */
 }
 
 .product-hover-info p {
   margin: 6px 0;
   font-size: 15px;
+}
+
+.product-hover-info .btn {
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: #ffcc00;
+  color: #1a4731;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.product-hover-info .btn:hover {
+  background: #e6b800;
 }
 
 /* -------------------
@@ -1046,4 +1064,85 @@ html {
 
 .slide.next {
   transform: translateX(100%);
+}
+
+
+/* -------------------
+   Vision Section
+------------------- */
+.vision-section {
+  padding: 80px 50px;
+  background: #f5f9f6; /* light greenish background */
+  text-align: center;
+}
+
+.vision-section h2 {
+  font-size: 36px;
+  color: #1a4731;
+  margin-bottom: 20px;
+}
+
+.vision-section p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.8;
+}
+/* Dropdown Menu */
+.nav-links li {
+  position: relative;
+}
+
+/* Submenu (Dropdown) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a4731;
+  min-width: 180px;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Submenu links */
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content li a {
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown-content li a:hover {
+  background-color: #14522b;
+}
+
+/* Desktop: show on hover */
+@media (min-width: 993px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+/* Mobile: show on click */
+.dropdown-content.show {
+  display: block;
+}
+
+/* Optional: make submenu full width on mobile */
+@media (max-width: 992px) {
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    background-color: #14522b;
+  }
 }

@@ -1,73 +1,73 @@
-// Select elements
+// ============================
+// NAVBAR: Mobile toggle & dropdown
+// ============================
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-// Toggle menu on click
+// Toggle mobile menu
 menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('show');
 });
 
-// ----------------------
-// Modal functionality
+// Close mobile menu if clicking outside
+window.addEventListener('click', (e) => {
+  if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+    navLinks.classList.remove('show');
+  }
+});
+
+// ============================
+// MODALS: Founders
+// ============================
 function openModal(id) {
-  document.getElementById(id).style.display = 'flex';
+  const modal = document.getElementById(id);
+  if (modal) modal.style.display = 'flex';
 }
 
 function closeModal(id) {
-  document.getElementById(id).style.display = 'none';
+  const modal = document.getElementById(id);
+  if (modal) modal.style.display = 'none';
 }
 
-// Close modal if user clicks outside content
-window.onclick = function(event) {
-  const modals = document.querySelectorAll(".modal");
-  modals.forEach(modal => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
+// Close modal if clicking outside
+window.addEventListener('click', (e) => {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (e.target === modal) modal.style.display = 'none';
   });
-};
+});
 
-// ----------------------
-// Hero slideshow with arrows
+// ============================
+// HERO SLIDESHOW
+// ============================
 let slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
-let slideInterval = setInterval(nextSlideAuto, 4000); // auto change every 4s
+let slideInterval = setInterval(nextSlideAuto, 4000);
 
-// Update slides with fade + slide effect
 function updateSlides() {
   slides.forEach((slide, i) => {
     slide.classList.remove('active', 'prev', 'next');
-
-    if (i === currentSlide) {
-      slide.classList.add('active');
-    } else if (i === (currentSlide - 1 + slides.length) % slides.length) {
-      slide.classList.add('prev');
-    } else if (i === (currentSlide + 1) % slides.length) {
-      slide.classList.add('next');
-    }
+    if (i === currentSlide) slide.classList.add('active');
+    else if (i === (currentSlide - 1 + slides.length) % slides.length) slide.classList.add('prev');
+    else if (i === (currentSlide + 1) % slides.length) slide.classList.add('next');
   });
 }
 
-// Automatic next slide
 function nextSlideAuto() {
   currentSlide = (currentSlide + 1) % slides.length;
   updateSlides();
 }
 
-// Manual next slide
 function nextSlideManual() {
   nextSlideAuto();
   resetSlideInterval();
 }
 
-// Manual previous slide
 function prevSlide() {
   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   updateSlides();
   resetSlideInterval();
 }
 
-// Reset interval after manual navigation
 function resetSlideInterval() {
   clearInterval(slideInterval);
   slideInterval = setInterval(nextSlideAuto, 4000);
@@ -76,37 +76,38 @@ function resetSlideInterval() {
 // Initial setup
 updateSlides();
 
-// ----------------------
-// Counter animation
+// ============================
+// COUNTER ANIMATION (Stats)
+// ============================
 const counters = document.querySelectorAll('.counter');
+const statsSection = document.querySelector('.stats');
+let statsStarted = false;
 const speed = 200; // smaller = faster
 
-const animateCounters = () => {
+function animateCounters() {
   counters.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText;
-      const increment = target / speed;
-
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const step = () => {
+      count += target / speed;
       if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 20);
+        counter.innerText = Math.ceil(count);
+        requestAnimationFrame(step);
       } else {
         counter.innerText = target;
       }
     };
-    updateCount();
+    step();
   });
-};
+}
 
 // Run when stats section is visible
-const statsSection = document.querySelector('.stats');
-let statsStarted = false;
-
 window.addEventListener('scroll', () => {
-  const sectionTop = statsSection.offsetTop - window.innerHeight + 100;
-  if (!statsStarted && window.scrollY > sectionTop) {
-    animateCounters();
-    statsStarted = true;
+  if (!statsStarted && statsSection) {
+    const sectionTop = statsSection.offsetTop - window.innerHeight + 100;
+    if (window.scrollY > sectionTop) {
+      animateCounters();
+      statsStarted = true;
+    }
   }
 });
